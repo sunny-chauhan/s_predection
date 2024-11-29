@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soil Classification AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="hero">
+        <div class="card">
+            <h1>🌱 Soil Classification AI</h1>
+            <p>Upload an image or video to detect the type of soil.</p>
+            <form id="uploadForm" method="POST" enctype="multipart/form-data" action="/upload">
+                <div class="input-group">
+                    <label for="imageFile">Image File</label>
+                    <input type="file" id="imageFile" name="imageFile" accept="image/*">
+                </div>
+                <div class="input-group">
+                    <label for="videoFile">Video File</label>
+                    <input type="file" id="videoFile" name="videoFile" accept="video/*">
+                </div>
+                <button type="submit">Submit</button>
+                <p id="errorMessage"></p>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
